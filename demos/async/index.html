@@ -14,25 +14,30 @@
 <script>
 
 
-async.map(['file1','file2','file3'], ['file5'], function(err, results) {
+async.map(['file1','file2','file3'], function(filePath, callback) {
+   debugger;
+}, function(err, results) {
     // results is now an array of stats for each file
     debugger;
 });
 
-// async.filter(['file1','file2','file3'], function(filePath, callback) {
-//   fs.access(filePath, function(err) {
-//     callback(null, !err)
-//   });
-// }, function(err, results) {
-//     // results now equals an array of the existing files
-// });
+async.filter(['file1','file2','file3'], function(filePath, callback) {
+    debugger
+    callback(null, filePath+'123')
 
-// async.parallel([
-//     // function(callback) { ... },
-//     // function(callback) { ... }
-// ], function(err, results) {
-//     // optional callback
-// });
+}, function(err, results) {
+    // results now equals an array of the existing files
+    debugger
+});
+
+async.parallel([
+    function(callback) { 
+      callback(1)
+    },
+    function(callback) { ... }
+], function(err, results) {
+    // optional callback
+});
 
 // async.series([
 //     // function(callback) { ... },

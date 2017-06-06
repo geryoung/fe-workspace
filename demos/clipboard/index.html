@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>index</title>
+  <script src="../../browser-lib/clipboard/clipboard.js"></script>
+</head>
+<body>
+<textarea id="bar">Mussum ipsum cacilds...</textarea>
+
+<!-- Trigger -->
+<button class="btn" data-clipboard-action="cut" data-clipboard-target="#bar">
+    Cut to clipboard
+</button>
+</body>
+
+<script>
+var clipboard = new Clipboard('.btn');
+
+clipboard.on('success', function(e) {
+  debugger;
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+
+    e.clearSelection();
+});
+
+clipboard.on('error', function(e) {
+  debugger;
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
+</script>
+</html>
