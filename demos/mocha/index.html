@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>index</title>
+  <script src="../../browser-lib/mocha/mocha.js"></script>
+  <script src="../../browser-lib/chai/chai.js"></script>
+  <link rel="stylesheet" href="../../browser-lib/mocha/mocha.css">
+</head>
+<body>
+<div id="mocha">
+  
+</div>
+</body>
+
+<script>
+  mocha.setup('bdd');
+  var expect = chai.expect;
+  describe('测试集a', function() {
+    it('测试1', function() {
+       expect(0).to.be.equal(1);
+    })
+
+    it('测试2', function() {
+       expect(1).to.be.equal(1);
+    })
+  });
+  
+  mocha.run();
+</script>
+</html>

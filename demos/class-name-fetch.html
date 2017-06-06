@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>class name collection</title>
+
+</head>
+<body>
+<div class="pnl-body">
+        <ul id="bbs-fun-ul" class="items"><li><span class="pnl-body-title pnl-body-title-hasauthordate"><a href="http://bbs.itchz.cmbchina.cn/JForum/posts/preList/66194/134192.page" title="【同业中后台开发室】2017踏青活动" target="_blank">【同业中后台开发室】2017踏青活动</a></span><span class="pnl-body-author">瞿成佳</span><span class="pnl-body-date">05/06</span></li><li><span class="pnl-body-title pnl-body-title-hasauthordate"><a href="http://bbs.itchz.cmbchina.cn/JForum/posts/preList/66189/134167.page" title="[踏青活动] 供应链金融开发室 西溪湿地健身徒步一日游" target="_blank">[踏青活动] 供应链金融开发室 西溪湿地健身徒步一日游</a></span><span class="pnl-body-author">贾云龙</span><span class="pnl-body-date">04/06</span></li><li><span class="pnl-body-title pnl-body-title-hasauthordate"><a href="http://bbs.itchz.cmbchina.cn/JForum/posts/preList/66192/134185.page" title="原价269元转让一瓶考拉买的全新兰蔻400ML粉水" target="_blank">原价269元转让一瓶考拉买的全新兰蔻400ML粉水</a></span><span class="pnl-body-author">晏英</span><span class="pnl-body-date">05/06</span></li><li><span class="pnl-body-title pnl-body-title-hasauthordate"><a href="http://bbs.itchz.cmbchina.cn/JForum/posts/preList/66190/134177.page" title=" 仁苑 好房出租" target="_blank"> 仁苑 好房出租</a></span><span class="pnl-body-author">毛翠</span><span class="pnl-body-date">05/06</span></li><li><span class="pnl-body-title pnl-body-title-hasauthordate"><a href="http://bbs.itchz.cmbchina.cn/JForum/posts/preList/66193/134187.page" title="收一万额度市民卡  95折 。" target="_blank">收一万额度市民卡  95折 。</a></span><span class="pnl-body-author">杨传奇</span><span class="pnl-body-date">05/06</span></li></ul>
+      </div>
+</body>
+
+<script>
+
+  function getClassNameList() {
+    var classNameObj = {};
+
+    var domList = document.all;
+    debugger;
+    for(var i=0; i<domList.length; i++) {
+      var dom = domList[i];
+      var classList = dom.classList;
+      for(var j=0; j<classList.length; j++) {
+        var className = classList[j];
+
+        classNameObj[className] = 1;
+      }
+    }
+
+    var resultClassList = Object.keys(classNameObj);
+    resultClassList = resultClassList.sort();
+
+    return resultClassList;
+  }
+
+
+  console.log(getClassNameList()); 
+</script>
+
+</html>
