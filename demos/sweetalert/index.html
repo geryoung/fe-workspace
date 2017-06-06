@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>index</title>
+  <script src="../../browser-lib/sweetalert/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="../../browser-lib/sweetalert/sweetalert.css">
+</head>
+<body>
+
+</body>
+
+<script>
+swal("Hello world!");
+swal("Oops...", "Something went wrong!", "error");
+
+swal({
+  title: "Are you sure?",
+  text: "You will not be able to recover this imaginary file!",
+  type: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#DD6B55",
+  confirmButtonText: "Yes, delete it!",
+  closeOnConfirm: false,
+  html: false
+}, function(){
+  swal("Deleted!",
+  "Your imaginary file has been deleted.",
+  "success");
+});
+
+// A prompt modal where the user's input is logged:
+
+// swal({
+//   title: "An input!",
+//   text: 'Write something interesting:',
+//   type: 'input',
+//   showCancelButton: true,
+//   closeOnConfirm: false,
+//   animation: "slide-from-top"
+// }, function(inputValue){
+//   console.log("You wrote", inputValue);
+// });
+</script>
+</html>
