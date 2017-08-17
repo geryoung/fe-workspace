@@ -13,6 +13,7 @@ dragula
 sweetalert
 
 
+simpl.info
 
 
 ### todo
